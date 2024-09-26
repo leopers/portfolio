@@ -1,5 +1,6 @@
 import React from "react";
 import "./Header.css";
+import { Link } from "react-router-dom";
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
 import myPhoto from "../assets/images/myPhoto.jpg";
 
@@ -14,7 +15,7 @@ const Header = () => {
 
       {/* Center Section: Navigation Links */}
       <nav className="center-section nav-links">
-        <a href="#about">About</a>
+        <Link to="/about">About</Link>
         <a href="#projects">Projects</a>
         <a href="#experiences">Experiences</a>
         <a href="#contact">Contact</a>
