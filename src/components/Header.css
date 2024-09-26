@@ -1,0 +1,108 @@
+/* General Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between; /* Space out left, center, and right sections */
+  align-items: center; /* Vertically center everything */
+  padding: 1rem 2rem;
+  background-color: #7c89a3;
+  flex-wrap: wrap; /* Allow wrapping for small screens */
+}
+
+/* Left Section: Image and Name */
+.left-section {
+  display: flex;
+  align-items: center;
+}
+
+.profile-photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 0.5rem;
+}
+
+.name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+}
+
+/* Center Section: Navigation Links */
+.center-section {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Right Section: Social Icons */
+.right-section {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #61dafb;
+}
+
+/* --- RESPONSIVE DESIGN FOR SMALL SCREENS (iPhones and Mobile Devices) --- */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column; /* Stack items vertically on small screens */
+    align-items: center; /* Center all items */
+  }
+
+  /* Adjust image size and name for smaller screens */
+  .profile-photo {
+    width: 40px;
+    height: 40px;
+    margin-right: 0.3rem;
+  }
+
+  .name {
+    font-size: 1.2rem;
+  }
+
+  /* Navigation Links: Adjust spacing for mobile */
+  .center-section {
+    margin-top: 1rem; /* Add spacing from the top */
+    flex-direction: column; /* Stack links vertically */
+    gap: 1rem; /* Reduce the gap between links */
+  }
+
+  /* Social Icons: Adjust size and spacing */
+  .right-section {
+    margin-top: 1rem; /* Add spacing between sections */
+  }
+
+  .social-icons a {
+    font-size: 1.3rem; /* Slightly smaller icons */
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 0.5rem 1rem; /* Adjust padding for very small screens */
+  }
+
+  .nav-links a {
+    font-size: 1rem; /* Slightly smaller text for navigation links */
+  }
+}
